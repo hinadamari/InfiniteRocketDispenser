@@ -34,6 +34,8 @@ public class InfiniteRocketDispenserEventListener implements Listener
 
     	if (event.getItem().getType() != Material.FIREWORK) return;
 
+    	if (!(event.getBlock().getState() instanceof Dispenser)) return;
+
     	Dispenser dispenser = (Dispenser) event.getBlock().getState();
 
     	ItemStack newItemStack = event.getItem().clone();
